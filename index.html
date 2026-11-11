@@ -1,37 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IOHA PM Sensors Resources</title>
   <style>
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #53627a;
+      --line: #dfe7f2;
+      --link: #0b57d0;
+      --accent: #eaf2ff;
+    }
+
     body {
+      margin: 0;
+      padding: 40px 20px;
+      background: var(--bg);
+      color: var(--text);
       font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
       line-height: 1.6;
     }
 
-    li {
-      margin: 0.75rem 0;
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      margin-top: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .meta {
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-size: 0.96rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .actions a {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--line);
+      background: var(--accent);
+      color: var(--link);
+    }
+
+    .actions a:hover {
+      text-decoration: none;
+      background: #dfeeff;
+    }
+
+    .release {
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+
+    .release a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    .release a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>IOHA PM Sensors Resources</h1>
-  <p>Resources from the Community of Practice on PM Sensor Technologies.</p>
+  <div class="container">
+    <h1>IOHA PM Sensors Resources</h1>
+    <p class="subtitle">Community of Practice on PM Sensor Technologies</p>
 
-  <h2>Documents</h2>
-  <ul>
-    <li>
-      <strong>IOHA PM Sensors Playbook</strong>
-      (<a href="Play1-revised.pdf" target="_blank" rel="noopener">View</a> |
-      <a href="Play1-revised.pdf" download>Download</a>)
-      — <a href="https://github.com/IOHA-PM-Sensors/CoP-Resources/releases/tag/Playbook">Related release: Playbook: in-field coaching</a>
-    </li>
-  </ul>
+    <div class="grid">
+      <div class="card">
+        <h2>IOHA PM Sensors Playbook</h2>
+        <div class="meta">PDF resource</div>
 
-  <p>When adding more PDFs, add a list item above with the document title and its exact filename.</p>
+        <div class="actions">
+          <a href="Play1-revised.pdf" target="_blank" rel="noopener">View</a>
+          <a href="Play1-revised.pdf" download>Download</a>
+        </div>
+
+        <div class="release">
+          Related release:
+          <a href="https://github.com/IOHA-PM-Sensors/CoP-Resources/releases/tag/Playbook">
+            Playbook: in-field coaching
+          </a>
+        </div>
+      </div>
+
+      <!-- Add more documents like this -->
+      <!--
+      <div class="card">
+        <h2>Another Document</h2>
+        <div class="meta">PDF resource</div>
+
+        <div class="actions">
+          <a href="AnotherFile.pdf" target="_blank" rel="noopener">View</a>
+          <a href="AnotherFile.pdf" download>Download</a>
+        </div>
+
+        <div class="release">
+          Related release:
+          <a href="https://github.com/IOHA-PM-Sensors/CoP-Resources/releases/tag/YourReleaseTag">
+            Your release name
+          </a>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
 </body>
 </html>
